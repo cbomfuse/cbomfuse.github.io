@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="CBOMFuse — deterministic fusion and reconciliation of Cryptographic Bill of Materials."
+    >
+
+    <meta
+        name="keywords"
+        content="CBOM, Cryptographic Bill of Materials, CycloneDX, cryptography, cybersecurity, PQC"
+    >
+
+    <title>CBOMFuse — Cryptographic Bill of Materials Fusion</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="site-header">
+        <nav class="navbar">
+
+            <a href="/" class="logo">
+                CBOMFuse
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#architecture">Architecture</a></li>
+                <li><a href="#documentation">Documentation</a></li>
+                <li><a href="#github">GitHub</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <!-- Hero -->
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <span class="eyebrow">
+                    Cryptographic Bill of Materials
+                </span>
+
+                <h1>
+                    Fuse. Normalize.
+                    <span>Understand.</span>
+                </h1>
+
+                <p class="hero-description">
+                    CBOMFuse reconciles cryptographic inventories from
+                    multiple analysis tools into a unified, deterministic,
+                    and auditable Cryptographic Bill of Materials.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#documentation" class="button primary">
+                        Get Started
+                    </a>
+
+                    <a href="#github" class="button secondary">
+                        View on GitHub
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Problem -->
+        <section class="section">
+
+            <div class="section-heading">
+
+                <span class="eyebrow">
+                    The Problem
+                </span>
+
+                <h2>
+                    Cryptographic inventories don't always agree.
+                </h2>
+
+                <p>
+                    Different CBOM generators may identify the same
+                    cryptographic asset using different names, schemas,
+                    parameter representations, or levels of detail.
+                </p>
+
+            </div>
+
+            <div class="example-box">
+
+                <div class="example-column">
+                    <h3>Tool A</h3>
+                    <code>AES256-GCM</code>
+                </div>
+
+                <div class="arrow">
+                    →
+                </div>
+
+                <div class="example-column">
+                    <h3>CBOMFuse</h3>
+                    <code>AES-256-GCM</code>
+                </div>
+
+                <div class="arrow">
+                    →
+                </div>
+
+                <div class="example-column">
+                    <h3>Tool B</h3>
+                    <code>AES/GCM/NoPadding</code>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Features -->
+        <section id="features" class="section">
+
+            <div class="section-heading">
+
+                <span class="eyebrow">
+                    Capabilities
+                </span>
+
+                <h2>
+                    Built for reliable CBOM reconciliation.
+                </h2>
+
+            </div>
+
+            <div class="feature-grid">
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">
+                        N
+                    </div>
+
+                    <h3>Normalization</h3>
+
+                    <p>
+                        Normalize algorithm names, parameter sets,
+                        key sizes, curves, modes, and other
+                        cryptographic metadata.
+                    </p>
+
+                </article>
+
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">
+                        M
+                    </div>
+
+                    <h3>Semantic Matching</h3>
+
+                    <p>
+                        Identify when differently represented
+                        cryptographic assets refer to the same
+                        underlying primitive.
+                    </p>
+
+                </article>
+
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">
+                        F
+                    </div>
+
+                    <h3>CBOM Fusion</h3>
+
+                    <p>
+                        Combine multiple CBOMs into a unified
+                        CycloneDX-compatible cryptographic inventory.
+                    </p>
+
+                </article>
+
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">
+                        A
+                    </div>
+
+                    <h3>Auditable Decisions</h3>
+
+                    <p>
+                        Every transformation and matching decision
+                        can be associated with a versioned rule.
+                    </p>
+
+                </article>
+
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">
+                        R
+                    </div>
+
+                    <h3>Risk & Confidence</h3>
+
+                    <p>
+                        Assign confidence and risk information to
+                        reconciled cryptographic assets.
+                    </p>
+
+                </article>
+
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">
+                        P
+                    </div>
+
+                    <h3>PQC Awareness</h3>
+
+                    <p>
+                        Support analysis of classical and
+                        post-quantum cryptographic algorithms
+                        and parameter sets.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- Architecture -->
+        <section id="architecture" class="section architecture">
+
+            <div class="section-heading">
+
+                <span class="eyebrow">
+                    Architecture
+                </span>
+
+                <h2>
+                    From multiple CBOMs to one unified view.
+                </h2>
+
+            </div>
+
+            <div class="pipeline">
+
+                <div class="pipeline-node">
+                    <strong>CBOMKit</strong>
+                    <span>CycloneDX</span>
+                </div>
+
+                <div class="pipeline-arrow">→</div>
+
+                <div class="pipeline-node">
+                    <strong>Normalizer</strong>
+                    <span>Canonical representation</span>
+                </div>
+
+                <div class="pipeline-arrow">→</div>
+
+                <div class="pipeline-node highlight">
+                    <strong>CBOMFuse</strong>
+                    <span>Semantic reconciliation</span>
+                </div>
+
+                <div class="pipeline-arrow">→</div>
+
+                <div class="pipeline-node">
+                    <strong>Unified CBOM</strong>
+                    <span>CycloneDX</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Example -->
+        <section class="section">
+
+            <div class="section-heading">
+
+                <span class="eyebrow">
+                    Example
+                </span>
+
+                <h2>
+                    One cryptographic asset. Multiple representations.
+                </h2>
+
+            </div>
+
+            <pre class="code-block"><code>{
+  "algorithm": "AES",
+  "keySize": 256,
+  "mode": "GCM",
+  "normalized": "AES-256-GCM",
+  "confidence": 0.99,
+  "source": [
+    "cbomkit",
+    "cdxgen"
+  ]
+}</code></pre>
+
+        </section>
+
+
+        <!-- Documentation -->
+        <section id="documentation" class="cta-section">
+
+            <h2>
+                Start fusing your CBOMs.
+            </h2>
+
+            <p>
+                Explore the documentation, architecture, and
+                implementation of CBOMFuse.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#" class="button primary">
+                    Documentation
+                </a>
+
+                <a href="#" class="button secondary">
+                    GitHub Repository
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="site-footer">
+
+        <div>
+            <strong>CBOMFuse</strong>
+            <p>
+                Deterministic cryptographic inventory reconciliation.
+            </p>
+        </div>
+
+        <div>
+            <p>
+                © 2026 CBOMFuse
+            </p>
+        </div>
+
+    </footer>
+
+
+</body>
+</html>
